@@ -1,0 +1,46 @@
+{% extends 'base.html' %}}
+
+{% block content %}
+
+<center><a href="{{ url_for('videopage')}}"><button type="button" class="btn btn-primary btn-lg mr-5 my-5">Open
+      Camera</button></a></center>
+
+{%if personal %}
+<table class="table table-bordered">
+  <tr>
+    <td rowspan='7'>
+      <center><img src="/static/images/prof.jpg" alt="Profile Picture" width="60%" class="img-thumnail"></center>
+    </td>
+    <th scope="row" class="thead-dark">Name</th>
+    <td>{{personal['name']}}</td>
+  </tr>
+  <tr>
+    <th scope="row" class="thead-dark">Father Name</th>
+    <td>{{personal['father name']}}</td>
+  </tr>
+  <tr>
+    <th scope="row" class="thead-dark">Identity Number</th>
+    <td>{{personal['identity number']}}</td>
+  </tr>
+  <tr>
+    <th scope="row" class="thead-dark">Gender</th>
+    <td>{{personal['gender']}}</td>
+  </tr>
+  <tr>
+    <th scope="row" class="thead-dark">Date of Birth</th>
+    <td>{{personal['dates'][0]}}</td>
+  </tr>
+
+  <tr>
+    <th scope="row" class="thead-dark">Date of Issue</th>
+    <td>{{personal['dates'][1]}}</td>
+  </tr>
+
+  <tr>
+    <th scope='row' class="thead-dark">Date of Expiry</th>
+    <td>{{personal['dates'][2]}}</td>
+  </tr>
+
+</table>
+{% endif %}
+{% endblock %}

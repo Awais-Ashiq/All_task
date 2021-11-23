@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block content %}
+<center><img src="{{url_for('video')}}" class="img-fluid" alt="Responsive image"></center>
+<center><a href="{{ url_for('closecam')}}"><button type="button" class="btn btn-primary btn-lg mx-5 my-5">Close Camera</button></a></center>
+
+{% endblock %}
