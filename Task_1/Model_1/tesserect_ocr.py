@@ -6,7 +6,7 @@ def ocr_core(img):
     pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
     text = pytesseract.image_to_string(img)
     return text
-img_pth = [rf"ocr_project\NIC Images/{img}" for img in os.listdir(r'ocr_project\NIC Images/')]
+img_pth = [rf"Task_1\NIC Images/{img}" for img in os.listdir(r'Task_1\NIC Images/')]
 
 
 
@@ -17,7 +17,7 @@ def remove_noice(img):
     return cv2.medianBlur(img, 5)
 
 def thresholing(img):
-    return cv2.threshold(img, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+    return cv2.threshold(img, 20, 100, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
 
 
 for idx,img in enumerate(img_pth):
