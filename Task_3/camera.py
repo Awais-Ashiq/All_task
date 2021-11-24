@@ -15,6 +15,8 @@ class Video(object):
         self.cam.write(frame)
         ret, jpg = cv2.imencode('.jpg', frame)
         return ret,jpg.tobytes()
+    def get_obj(self):
+        return self.cam
     def cam_releaser(self):
         if self.video.isOpened():
             return self.video.release()

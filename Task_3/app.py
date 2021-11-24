@@ -5,7 +5,6 @@ import cv2
 close_cam = True
 app = Flask(__name__)
 
-
 def generate_cam(camera):
     global close_cam
     while close_cam:
@@ -31,6 +30,7 @@ def videopage():
 
 @app.route('/video')
 def video():
+
     return Response(generate_cam(Video('static/videos/output.avi')), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/closecam')
@@ -48,6 +48,7 @@ def closecam():
     face_cascade = cv2.CascadeClassifier(
         'model/haarcascade_frontalface_default.xml')
     vid = OpenVideo('static/videos/output.avi')
+
     saved = False
     while not saved:
         ret, frame = vid.read_video()
@@ -56,7 +57,7 @@ def closecam():
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         box, detection = face_cascade.detectMultiScale2(
             gray, minNeighbors=8)  # Face Detection
-        if len(detection)>0 and detection[0]>=50:
+        if len(detection)>0:
             for x, y, w, h in box:
                 img = frame[y-30:y+h+30, x-30:x+w+30]
                 saved = cv2.imwrite('static/images/prof.jpg', img)

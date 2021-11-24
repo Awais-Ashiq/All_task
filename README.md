@@ -1,5 +1,5 @@
 # Image proccessing and text extration techniques in python
-
+[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
  In this repository you can find most valuable method to learn and persue forward in profesional career.
  there are different things being done in the repository and working tree is mentioned bellow
 

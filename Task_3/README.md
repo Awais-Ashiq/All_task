@@ -71,3 +71,5 @@ and print the result in table format as mentioend bellow.
 - Deep learning
 - Python
 - OCR
+
+
