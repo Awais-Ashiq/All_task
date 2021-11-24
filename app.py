@@ -1,4 +1,4 @@
-from flask import Flask, render_template, Response, redirect
+from flask import Flask, render_template, Response
 from camera import Video, TextDetection, OpenVideo
 from datetime import datetime
 import cv2
@@ -14,11 +14,13 @@ def generate_cam(camera):
             break
         yield(b'--frame\r\n'
               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-    # camera.cam_releaser()
+    camera.cam_releaser()
     # print('-----------------------------')
 
 @app.route('/')
 def index():
+    global close_cam
+    close_cam = True
     return render_template('index.html')
 
 
@@ -54,7 +56,7 @@ def closecam():
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         box, detection = face_cascade.detectMultiScale2(
             gray, minNeighbors=8)  # Face Detection
-        if len(detection)>0 and detection[0]>=70:
+        if len(detection)>0 and detection[0]>=50:
             for x, y, w, h in box:
                 img = frame[y-30:y+h+30, x-30:x+w+30]
                 saved = cv2.imwrite('static/images/prof.jpg', img)
