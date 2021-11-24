@@ -1,15 +1,11 @@
 
-# All Projects regarding Image Processing By Muhammad Awais
+# Text Recognition using OCR and Flask | Task 3
 
 In this directory i have managed different types of method to do image Processing and numpy. 
 Thid directory is managed in a way that i all same type or working can be viewed in same file.
 I have done most of the work in jupyter notebook. so you have to open only one notebook to check every detail of particular topic.
 Here is the Working tree of my Projects directory
-### Flask-Ocr_online
-### Numpy and images
-### OCR models
-### Opencv
-### PIL_METADATA
+
 ## Flask-Ocr_online
  In this working directory some awesome work has done that is, recognition of text
  from id card and display its information including the face image on the website.
@@ -75,5 +71,3 @@ and print the result in table format as mentioend bellow.
 - Deep learning
 - Python
 - OCR
-
-
