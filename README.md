@@ -37,32 +37,6 @@ and then clone the repository by following this command
 but you need to be in the same directory as you are working while 
 runing the below mentioned command in terminal
 so follow commands step by step
-## Task 4
- ### Parser for yolo
- first of you need to have the same output of json format as it accepts. This is the parser for yolo and in this parser we parsing json annotated with vgg image anotor to Yolo supported format. there is only one file named as parser_for_yolo.py. that file will haave function named as to_yolo_format(path_to_json,path_to_text_files,path_to_images). this function takes 3 inputs first input is json file path second input is path where you want to store text files. and third one is images path where your images are stored and it will make text files that files are supported by yolo format
- ```bash
- {
-    "id": {
-        "filename": "name of file",
-        "size": 'size',
-        "regions": [
-            {
-                "shape_attributes": {
-                    "name": "rect",
-                    "x": 'x-coordinates',
-                    "y": 'y-coordinates',
-                    "width": 'width',
-                    "height": 'height'
-                },
-                "region_attributes": {
-                    "names": "dog"
-                }
-            }
-        ],
-        "file_attributes": {}
-    },
- }
- ```
 
 ```bash  
 git clone https://github.com/Awais-Ashiq/flask_ocr.git
@@ -105,6 +79,32 @@ here it will look like this.
     and print the result in table format as mentioend bellow.
 
     ![App Screenshot](https://i.ibb.co/WHq4TgX/results-of-ocr.png)
+## Task 4
+ ### Parser for yolo
+ first of you need to have the same output of json format as it accepts. This is the parser for yolo and in this parser we parsing json annotated with vgg image anotor to Yolo supported format. there is only one file named as parser_for_yolo.py. that file will haave function named as to_yolo_format(path_to_json,path_to_text_files,path_to_images). this function takes 3 inputs first input is json file path second input is path where you want to store text files. and third one is images path where your images are stored and it will make text files that files are supported by yolo format
+ ```bash
+ {
+    "id": {
+        "filename": "name of file",
+        "size": 'size',
+        "regions": [
+            {
+                "shape_attributes": {
+                    "name": "rect",
+                    "x": 'x-coordinates',
+                    "y": 'y-coordinates',
+                    "width": 'width',
+                    "height": 'height'
+                },
+                "region_attributes": {
+                    "names": "dog"
+                }
+            }
+        ],
+        "file_attributes": {}
+    },
+ }
+ ```
 
 
     ## Authors
