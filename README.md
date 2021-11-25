@@ -106,10 +106,9 @@ here it will look like this.
  }
  ```
 
+## Authors
 
-    ## Authors
-
-    - [@Muhammad Awais](https://github.com/Awais-Ashiq)
+- [@Muhammad Awais](https://github.com/Awais-Ashiq)
 
 
 
